@@ -18,17 +18,7 @@ export const RemoveToDo = (id) => {
   };
 };
 
-export const StartEditToDo = (id, text) => {
-  console.log("Start Edit To Do: ", id);
-
-  return {
-    type: EDIT_ToDo,
-    text,
-    id,
-  };
-};
-
-export const EndEditToDo = (id, text) => {
+export const EditToDo = (id, text) => {
   console.log("End Edit To Do: ", id);
 
   return {

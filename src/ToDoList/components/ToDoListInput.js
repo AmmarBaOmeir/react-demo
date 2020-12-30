@@ -37,8 +37,12 @@ function ToDoListInput(props) {
         type="submit"
         value="Add"
         onClick={() => {
-          props.AddToDo(state.id, state.text);
-          setstate({ id: "0", text: "" });
+          if (state.text !== "") {
+            props.AddToDo(state.id, state.text);
+            setstate({ id: "0", text: "" });
+          } else {
+            alert("You must write to do text first!");
+          }
         }}
       />
     </div>
