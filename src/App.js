@@ -1,6 +1,7 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import ToDoList from "./ToDoList/ToDoList";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
             To Do List
           </Link>
         </header>
-        <main>
+        <main style={{ display: "flex", justifyContent: "center" }}>
           <Switch>
             <Route path="/PeopleList">
               <PeopleList />
@@ -38,10 +39,6 @@ function Home() {
 
 function PeopleList() {
   return <h2>PeopleList</h2>;
-}
-
-function ToDoList() {
-  return <h2>ToDoList</h2>;
 }
 
 export default App;
