@@ -6,8 +6,9 @@ import { connect } from "react-redux";
 
 function ToDoList(props) {
   const renderToDoList = () => {
-    const { todos } = props;
-    console.log("renderToDoList : ", todos);
+    const { todos } = props.todoReducer;
+    console.log("renderToDoList Props: ", props.todoReducer);
+    console.log("renderToDoList todos: ", todos);
     return (
       <ul className="list-group">
         {todos.map((todo) => {
@@ -27,6 +28,6 @@ function ToDoList(props) {
 }
 
 export default connect((state) => {
-  console.log("from connect", state);
+  // console.log("from connect", state);
   return state;
 })(ToDoList);

@@ -6,10 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import todoReducers from "./ToDoList/redux/todoReducers";
+// import { createStore } from "redux";
+import store from "./store";
 
-const store = createStore(todoReducers);
+// const store = createStore(todoReducers);
 
 ReactDOM.render(
   <Provider store={store}>

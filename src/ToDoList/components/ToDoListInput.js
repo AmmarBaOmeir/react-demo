@@ -51,7 +51,7 @@ function ToDoListInput(props) {
 
 export default connect(
   (state) => {
-    console.log("from connect", state);
+    // console.log("from connect", state);
     return state;
   },
   { AddToDo, RemoveToDo, ClearTodos }

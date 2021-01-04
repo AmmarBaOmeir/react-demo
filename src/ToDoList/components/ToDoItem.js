@@ -70,10 +70,10 @@ function ToDoItem(props) {
               switchEdit(!isEdit);
               setCurrent("");
               // window.location.reload();
-              console.log("SAVED");
+              // console.log("SAVED");
             } else {
               alert("can not be empty!");
-              console.log("Empty Text");
+              // console.log("Empty Text");
             }
           }}
         >
@@ -84,7 +84,7 @@ function ToDoItem(props) {
           className="edit btn btn-info ml-1"
           onClick={() => {
             switchEdit(!isEdit);
-            console.log("Text Edit Canceled");
+            // console.log("Text Edit Canceled");
           }}
         >
           Cancel
@@ -96,7 +96,7 @@ function ToDoItem(props) {
 
 export default connect(
   (state) => {
-    console.log("from connect", state);
+    // console.log("from connect", state);
     return state;
   },
   { RemoveToDo, EditToDo }

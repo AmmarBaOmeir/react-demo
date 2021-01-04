@@ -2,6 +2,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ToDoList from "./ToDoList/ToDoList";
+import Characters from "./Characters/Characters";
+import CharDetails from "./Characters/components/CharDetails";
 
 function App() {
   return (
@@ -18,10 +20,13 @@ function App() {
         <main style={{ display: "flex", justifyContent: "center" }}>
           <Switch>
             <Route path="/PeopleList">
-              <PeopleList />
+              <Characters />
             </Route>
             <Route path="/ToDoList">
               <ToDoList />
+            </Route>
+            <Route path="/CharDetails">
+              <CharDetails />
             </Route>
             <Route path="/">
               <Home />
@@ -35,10 +40,6 @@ function App() {
 
 function Home() {
   return <h2>Home</h2>;
-}
-
-function PeopleList() {
-  return <h2>PeopleList</h2>;
 }
 
 export default App;
