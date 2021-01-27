@@ -1,0 +1,32 @@
+.request-card {
+    background-color: #eeeeee;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.type-date {
+    display: flex;
+    justify-content: space-around;
+}
+
+.emp-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.emp-info img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.emp-info .emp-info-info {
+    display: flex;
+    align-items: center;
+}
+
+.emp-info .status-container {
+    padding: 1rem;
+}

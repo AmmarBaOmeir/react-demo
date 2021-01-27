@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import React  from "react";
+import { BrowserRouter as Router, Link, useParams, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { ShowCharacterDetails } from "../redux/CharacterActions";
 
@@ -15,14 +15,21 @@ const deadStyle = {
 
 function CharItem(props) {
   let data = props.data;
+  const history = useHistory();
+
   return (
-    <li>
-      <Link
-        to="./CharDetails"
+    <li
+      onClick={()=>{
+        // props.ShowCharacterDetails(CharId)
+        history.push(`/PeopleList/${data.char_id}`)
+      }}
+    >
+      {/* <Link
+        to="/CharDetails"
         style={{ textDecoration: "none" }}
         onClick={() => props.ShowCharacterDetails(data.char_id)}
-      >
-        <a href="" style={{ textDecoration: "none" }}>
+      > */}
+        {/* <a href="" style={{ textDecoration: "none" }}> */}
           <div className="item-container">
             <div className="image">
               <img src={data.img} alt="alt" />
@@ -55,8 +62,8 @@ function CharItem(props) {
               </div>
             </div>
           </div>
-        </a>
-      </Link>
+        {/* </a> */}
+      {/* </Link> */}
     </li>
   );
 }

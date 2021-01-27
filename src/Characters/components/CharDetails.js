@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { ShowCharacterDetails } from "../redux/CharacterActions";
+import { useParams } from "react-router-dom";
 
 const aliveStyle = {
   backgroundColor: "rgb(193, 233, 193)",
@@ -17,13 +18,14 @@ const deadStyle = {
 };
 
 function CharDetails(props) {
+  const { CharId } = useParams();
   const [charInfo, setCharInfo] = useState(null);
   const [loaded, setLoaded] = useState(false);
 
   // var charInfo = null;
 
   const fetchChars = async () => {
-    let apiUrl = `https://www.breakingbadapi.com/api/characters/${props.CharacterReducer.id}`;
+    let apiUrl = `https://www.breakingbadapi.com/api/characters/${CharId}`;
     const res = await fetch(apiUrl);
     const data = await res.json();
     console.log("Single Char Info: ", data[0]);

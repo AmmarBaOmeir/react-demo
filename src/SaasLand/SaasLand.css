@@ -1,0 +1,126 @@
+.global {}
+
+/* ------------------------ Header Section ------------------------ */
+
+.global .header {
+    background-color: #1E99E0;
+    padding: 1rem;
+}
+
+#curvedBorder {
+    position: absolute;
+    bottom: -5rem;
+    width: 100%;
+    margin: -1rem;
+    z-index: -1;
+}
+
+/* ------------------------ NAV ------------------------ */
+
+nav {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    top: 1rem;
+    color: aliceblue;
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul li {
+    margin: 5px 2rem;
+    display: inline;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: rgb(186, 216, 243);
+}
+
+nav .logo {
+    position: absolute;
+    left: 1rem;
+    cursor: pointer;
+}
+
+nav .register {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+}
+
+.register a {
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.register a:hover {
+    text-decoration: none;
+    color: rgb(186, 216, 243);
+}
+
+.register .sign-up {
+    color: steelblue;
+    margin-left: 1rem;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    padding: .5rem 1rem;
+}
+
+.register .sign-up:hover {
+    color: rgb(73, 154, 221);
+}
+
+/* ------------------------ Header ------------------------ */
+
+.header section {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.header section div {
+    padding: 3rem;
+}
+
+.header .article {
+    text-align: left;
+    padding: 2rem 5rem;
+    color: aliceblue;
+}
+
+.header .article input {
+    padding: .5rem 1rem;
+    border-radius: 3rem;
+    border: none;
+}
+
+.header img {
+    border-radius: 2rem
+}
+
+.Main {
+    display: flex;
+    justify-content: center;
+    z-index: -2;
+}
+
+/* Section of Article */
+
+.article-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20rem 5rem;
+    width: 80%;
+    background-color: #FBFBFD;
+    border-radius: 3rem
+}
+
+.article-section div {
+    padding: 1rem;
+    margin: 1rem;
+}
